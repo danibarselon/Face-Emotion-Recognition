@@ -15,6 +15,6 @@ reduce_learning_rate = ReduceLROnPlateau(monitor='val_loss', factor=0.9, patienc
 history = cnn_model.fit(x_train,
                         y_train,
                         batch_size=64,
-                        epochs=1,
+                        epochs=5,
                         validation_data=(x_test, y_test),
                         callbacks=[early_stopping, reduce_learning_rate])
